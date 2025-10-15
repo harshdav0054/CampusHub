@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f0f2f5;
+}
+
+.navbar {
+  background-color: #003366;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;              /* space between icon and text */
+  background: #e63946;    /* red color for action */
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;     /* slightly more rounded */
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.logout-btn:hover {
+  background: #ff4d5a;   /* lighter red on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+.welcome {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  color: inherit;
+}
+.card:hover {
+  background: #e6f0ff;
+}
+
+.card i {
+  font-size: 26px;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.content-section {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+}
+
+.section {
+  display: none;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+  margin-bottom: 15px;
+  color: #003366;
+}
+
+form input, form textarea {
+  width: 99%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  padding: 10px 20px;
+  background: #003366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+ul li {
+  background: #eef3ff;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.password-container input {
+  width: 95%;
+  padding: 10px;
+  padding-right: 40px; /* space for eye */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.password-container .toggle-eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+}
+.password-container .toggle-eye:hover {
+  color: #003366;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin: 5px 0 10px;
+  display: none;
+}
+
+
+/* Top-up notification style */
+.topup-popup {
+    width: auto !important;
+    min-width: 220px;
+    padding: 10px 15px !important;
+    font-size: 14px;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}

@@ -1,0 +1,472 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #4169E1;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding: 20px 0;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 16px;
+}
+
+.sidebar ul li:hover {
+  background-color: #334155;
+}
+
+/* Sidebar icons */
+.sidebar ul li i {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.logout-bottom {
+  margin-top: 430px;
+  margin-left: 60px;
+  background-color: #d51c1c; /* royal blue background */
+  border-radius: 6px;        /* rounded corners to match sidebar items */
+  padding: 12px 16px;        /* add padding inside the box */
+  width: fit-content;        /* shrink to content width */
+  cursor: pointer;           /* pointer cursor on hover */
+  transition: background 0.3s;
+}
+
+.logout-bottom:hover {
+  background-color: #334155; /* darker blue on hover */
+}
+
+.logout-bottom a {
+  color: white;              /* make text white */
+  text-decoration: none;     /* remove underline */
+  display: flex;
+  align-items: center;
+  /* padding removed here since added on .logout-bottom */
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+
+/* Search Bar fix */
+.search-bar i {
+  color: #64748b;
+  margin-right: 8px;
+  font-size: 15px;
+  position: static; /* override absolute positioning */
+}
+
+/* Buttons with icons */
+button i {
+  margin-right: 6px;
+}
+
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+header h1 {
+  font-size: 20px;
+  color: #1e293b;
+}
+
+/* Dashboard Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card strong {
+  display: block;
+  font-size: 24px;
+  color: #1d4ed8;
+  margin-top: 10px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 15px;
+  max-width: 400px;
+  position: relative;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  outline: none;
+  width: 100%;
+  color: #1e293b;
+}
+
+.search-bar i {
+  color: #94a3b8;
+  position: absolute;
+  right: 15px;
+}
+
+/* Dropdown */
+.status-toggle {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-size: 14px;
+}
+
+/* Form Elements */
+.input-group {
+  display: flex;
+  align-items: center;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  padding: 10px 15px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  transition: border 0.3s;
+}
+
+.input-group i {
+  margin-right: 10px;
+  color: #64748b;
+  font-size: 16px;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  outline: none;
+  color: #1e293b;
+  padding: 4px 2px;
+}
+
+.input-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Buttons */
+button {
+  padding: 10px 16px;
+  border: none;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button[type="submit"] {
+  background-color: #2563eb;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #1e40af;
+}
+
+button[type="button"] {
+  background-color: #e2e8f0;
+  color: #1e293b;
+}
+
+button[type="button"]:hover {
+  background-color: #cbd5e1;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Section Styling */
+.section {
+  display: none;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.section.active {
+  display: block;
+}
+
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+table td button {
+  padding: 6px 10px;
+  background-color: #2563eb;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+table td button:hover {
+  background-color: #1e40af;
+}
+
+/* Forms */
+form {
+  margin-top: 10px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: 0.3s;
+  outline: none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Submit Button */
+button[type="submit"] {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #43a047;
+}
+
+/* Logout Button */
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding-top: 70px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+}
+
+/* Status Filters */
+.status-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.status-filters button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #e2e8f0;
+  cursor: pointer;
+  transition: background 0.2s;
+  color: #1e293b;
+}
+
+.status-filters button:hover {
+  background-color: #cbd5e1;
+}
+
+.status-filters button.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Badges */
+.badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.badge.approved {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.badge.rejected {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.badge.pending {
+  background-color: #fef9c3;
+  color: #92400e;
+}
+
+/* Approve/Reject Buttons */
+.approve-btn,
+.reject-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.approve-btn {
+  background-color: #10b981;
+  color: white;
+}
+
+.approve-btn:hover {
+  background-color: #059669;
+}
+
+.reject-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.reject-btn:hover {
+  background-color: #dc2626;
+}
+
+
+.btn-confirm {
+  background-color: #3085d6 !important;  /* Blue */
+  color: white !important;
+  border-radius: 6px;
+  padding: 8px 20px;
+  margin-right: 10px;
+}
+
+.btn-cancel {
+  background-color: #d33 !important;  /* Red */
+  color: white !important;
+  border-radius: 6px;
+  padding: 8px 20px;
+}

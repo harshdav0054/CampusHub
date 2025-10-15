@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">CampusHub</div>
+    <div class="nav-right">
+      <button onclick="logout()" class="logout-btn">Logout</button>
+    </div>
+  </nav>
+
+  <!-- Welcome Section -->
+  <header class="welcome">
+    <h1>Welcome, Student </h1>
+    <p>Select a section below to manage your dashboard</p>
+  </header>
+
+  <!-- Navigation Cards -->
+  <section class="card-container">
+    <a href="D:/CampusHub/collegesearchpage/index.html" class="card">
+      <i class="fas fa-search"></i><h3>Explore Colleges</h3>
+    </a>
+    <div class="card" onclick="showSection('profile')">
+      <i class="fas fa-user-edit"></i><h3>Edit Profile</h3>
+    </div>
+  </section>
+
+  <!-- Dynamic Section Area -->
+  <section class="content-section">
+
+    <!-- Edit Profile -->
+    <div id="profile" class="section">
+      <h2>Edit Profile</h2>
+      <form id="editProfileForm">
+        <input type="text" placeholder="Full Name" id="fullName"/><br />
+
+        <!-- Email readonly -->
+        <input type="email" placeholder="Email" id="email" value="student@example.com" readonly /><br />
+
+        <div class="password-container">
+          <input type="password" placeholder="Old Password" id="oldPassword" />
+          <i class="fas fa-eye toggle-eye" onclick="togglePassword('oldPassword', this)"></i>
+        </div>
+
+        <div class="password-container">
+          <input type="password" placeholder="New Password" id="newPassword" />
+          <i class="fas fa-eye toggle-eye" onclick="togglePassword('newPassword', this)"></i>
+        </div>
+
+        <div class="password-container">
+          <input type="password" placeholder="Confirm Password" id="confirmPassword" />
+          <i class="fas fa-eye toggle-eye" onclick="togglePassword('confirmPassword', this)"></i>
+        </div>
+
+        <!-- Error message -->
+        <p id="passwordError" class="error-message"></p>
+
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+
+
+  </section>
+  
+  <script src="dashboard.js"></script>
+</body>
+</html>

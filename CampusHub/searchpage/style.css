@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f8fafa;
+  padding: 20px;
+}
+
+.intro-heading {
+  background-color: #f8fafa;
+  padding: 40px 20px 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.intro-heading h2 {
+  font-size: 40px;
+  color: #114b3c;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  background-color: #f0f0f0;
+  padding: 10px 5%;
+  width: 98%;
+  margin-left: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  z-index: 999; 
+}
+
+.nav-logo {
+  height: 60px;
+  width: 150px;
+}
+
+.logo {
+  background-image: url("logomain1.png");
+  background-size: cover;
+  height: 60px;
+  width: 150px;
+  background-color: #f0f0f0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #4CAF50;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn, .signup-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid #4CAF50;
+  background: none;
+  text-decoration: none;
+}
+
+.login-btn {
+  color: #4CAF50;
+  background-color: transparent;
+}
+
+.signup-btn {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.main-content {
+  flex: 3;
+  width: 100%;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.search-btn {
+  background-color: #4c52e6;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+  height: 46px;
+}
+
+.search-btn:hover {
+  background-color: #3943d2;
+}
+
+.search-btn i {
+  font-size: 16px;
+}
+
+.college-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.college-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.college-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.college-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.location {
+  color: #555;
+  font-size: 14px;
+}
+
+.desc {
+  font-size: 14px;
+  color: #444;
+}
+
+.info {
+  font-size: 13px;
+  color: #28c27c;
+  display: flex;
+  justify-content: space-between;
+}
+
+.more-info-btn {
+  display: block;
+  margin-top: auto;   /* Pushes button to bottom */
+  padding: 10px 15px;
+  background-color: #4CAF50; 
+  color: white; 
+  text-align: center;
+  text-decoration: none; 
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+.more-info-btn:hover {
+  background-color: #0e4611; 
+}
+
+
+/* Footer */
+.footer {
+  margin-top: 15px;
+  padding: 20px 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.footer-logo{
+  margin-bottom: 15px;
+}
+
+.footer-logo-img {
+  height: 60px;
+  width: 150px;
+  object-fit: contain;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  font-size: 16px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #4CAF50;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px auto;
+  width: 60%;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #333;
+}
+
+.no-results {
+  text-align: center;
+  color: #999;
+  font-size: 18px;
+  margin-top: 30px;
+  display: none;
+}
+
+/* Minimal & Clean with larger font */
+.user-menu .user-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #444;
+  text-decoration: none;
+  font-size: 17px;   /* increased from 15px */
+  transition: color 0.3s ease;
+}
+
+.user-menu .user-icon i {
+  font-size: 22px;   /* increased from 20px */
+  color: #444;
+}
+
+.user-menu .user-icon:hover {
+  color: #3498db;
+}
+
+.user-menu .user-icon:hover i {
+  color: #3498db;
+}

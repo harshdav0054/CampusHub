@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+}
+
+.registration-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: 90vh;
+}
+
+.registration-container {
+  display: flex;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  overflow: hidden;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.registration-form {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.registration-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0a4031;
+  font-size: 28px;
+}
+
+.registration-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon i.fas {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-icon {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  z-index: 10;
+}
+
+.toggle-icon i {
+  font-size: 16px;
+}
+
+.input-icon input {
+  width: 85%;
+  padding: 12px 38px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background-color: #f9f9f9;
+}
+
+button {
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: orange;
+}
+
+.registration-form p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.registration-form a {
+  color: #4CAF50;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.registration-form a:hover {
+  text-decoration: underline;
+}
+
+.registration-image {
+  flex: 1;
+  background: url('https://img.freepik.com/premium-photo/high-school-college-university-building_1114367-2336.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 400px;
+}
+
+/* Success Popup */
+.popup-success {
+  position: fixed;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  font-weight: 600;
+  z-index: 999;
+  transition: top 0.4s ease;
+}
+
+.popup-success.show {
+  top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .registration-container {
+    flex-direction: column-reverse;
+  }
+
+  .registration-image {
+    height: 200px;
+  }
+
+  .registration-form {
+    padding: 30px;
+  }
+}
+
+
+/* Error message styling */
+.error-msg {
+  font-size: 13px;
+  color: red;
+  margin: -10px 0 5px 38px; /* aligns under input, avoids shifting */
+}

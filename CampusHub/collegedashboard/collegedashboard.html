@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CampusHub College Dashboard</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>CampusHub</h2>
+    <ul>
+      <li onclick="showSection('profileDetails')">
+        <i class="fas fa-school"></i> College Info
+      </li>
+      <li onclick="showSection('account')">
+        <i class="fas fa-user"></i> My Account
+      </li>
+      <li onclick="logout()">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    
+    <section id="profileDetails" class="section">
+        <h2><i class="fas fa-building-columns"></i> College Info</h2>
+
+        <!-- Sub-tabs -->
+        <div class="form-tab-container">
+            <aside class="form-tabs">
+              <button onclick="showFormPart('basic')" class="active"><i class="fas fa-info-circle"></i> Basic Info</button>
+              <button onclick="showFormPart('logo')"><i class="fas fa-image"></i> Upload Logo</button>
+              <button onclick="showFormPart('courses')"><i class="fas fa-book"></i> Courses</button>
+              <button onclick="showFormPart('about')"><i class="fas fa-align-left"></i> About</button>
+            </aside>
+
+            <!-- Form Parts -->
+            <div class="form-content">
+
+                <form class="form-part" id="basic">
+                    <h3><i class="fas fa-info-circle"></i> Basic Info</h3>
+                    <div class="input-group">
+                        <i class="fas fa-university"></i>
+                        <input type="text" id="collegeName" placeholder="College Name" required />
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" id="address" placeholder="Address" required />
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-globe"></i>
+                        <input type="text" id="website" placeholder="Website URL" required />
+                    </div>
+                    <button type="submit"><i class="fas fa-save"></i> Save</button>
+                </form>
+
+                <form class="form-part" id="logo" style="display: none;">
+                    <h3><i class="fas fa-image"></i> Upload Logo / Image</h3>
+                    <div class="input-group">
+                        <i class="fas fa-image"></i>
+                        <input type="file" id="logoFile" accept="image/*" required />
+                    </div>
+                    <button type="submit"><i class="fas fa-save"></i> Save</button>
+                </form>
+
+                <form class="form-part" id="courses" style="display: none;">
+                    <h3><i class="fas fa-book"></i> Course Details</h3>
+                    <div class="input-group">
+                        <i class="fas fa-book-open"></i>
+                        <input type="text" id="courseName" placeholder="Course Name" required />
+                    </div>
+                    <button type="submit"><i class="fas fa-save"></i> Save</button>
+                </form>
+
+                <form class="form-part" id="about" style="display: none;">
+                    <h3><i class="fas fa-align-left"></i> About</h3>
+                    <div class="input-group">
+                        <i class="fas fa-info-circle"></i>
+                        <textarea id="aboutText" placeholder="About the college" rows="4" required></textarea>
+                    </div>
+                    <button type="submit"><i class="fas fa-save"></i> Save</button>
+
+                    <!-- Approval Button placed ONLY after last form -->
+                    <div id="approvalSection" style="text-align:center; margin:20px 0; display:none;">
+                      <button id="sendApprovalBtn"><i class="fas fa-paper-plane"></i> Send to Approval</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!--account section-->
+    <section id="account" class="section">
+        <h2><i class="fas fa-user-cog"></i> My Account (College Admin Info)</h2>
+        <form>
+            <h3><i class="fas fa-user-lock"></i> Login Credentials</h3>
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Username / Login ID" readonly />
+            </div>
+            <div class="input-group password-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="oldPassword" placeholder="Old Password" />
+                <span class="toggle-password" onclick="togglePassword('oldPassword', this)">
+                    <i class="fas fa-eye"></i>
+                </span>
+            </div>
+
+            <div class="input-group password-group">
+                <i class="fas fa-key"></i>
+                <input type="password" id="newPassword" placeholder="New Password" />
+                <span class="toggle-password" onclick="togglePassword('newPassword', this)">
+                    <i class="fas fa-eye"></i>
+                </span>
+            </div>
+
+            <div class="input-group password-group">
+                <i class="fas fa-key"></i>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" />
+                <span class="toggle-password" onclick="togglePassword('confirmPassword', this)">
+                    <i class="fas fa-eye"></i>
+                </span>
+            </div>
+            <button type="submit"><i class="fas fa-user-edit"></i> Update Account Info</button>
+        </form>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
